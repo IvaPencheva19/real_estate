@@ -1,11 +1,15 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.EstateCurrency;
 import bg.tuvarna.sit.real_estate_proj.data.entities.EstateType;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class EstateTypeRepository implements DAORepository<EstateType>{
 
@@ -94,5 +98,25 @@ public class EstateTypeRepository implements DAORepository<EstateType>{
             session.close();
         }
         return retEstateType;
+    }
+
+    public List<EstateType> getAll(){
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        List<EstateType> estateTypes=new LinkedList<>();
+
+        try{
+            String jql="SELECT e FROM EstateType e";
+            estateTypes.addAll((session.createQuery(jql,EstateType.class).getResultList()));
+            log.info("Get all estate types");
+        }
+        catch (Exception ex){
+            log.error("Get Estate type error: " +ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return estateTypes;
     }
 }

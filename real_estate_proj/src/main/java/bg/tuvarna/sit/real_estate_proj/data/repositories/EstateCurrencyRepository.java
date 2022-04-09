@@ -1,11 +1,15 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.EstateCity;
 import bg.tuvarna.sit.real_estate_proj.data.entities.EstateCurrency;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class EstateCurrencyRepository implements DAORepository<EstateCurrency>{
     private static final Logger log= Logger.getLogger(EstateCurrencyRepository.class);
@@ -93,5 +97,25 @@ public class EstateCurrencyRepository implements DAORepository<EstateCurrency>{
             session.close();
         }
         return retEstateCurrency;
+    }
+
+    public List<EstateCurrency> getAll(){
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        List<EstateCurrency> estateCurrencies=new LinkedList<>();
+
+        try{
+            String jql="SELECT e FROM EstateCurrency e";
+            estateCurrencies.addAll((session.createQuery(jql,EstateCurrency.class).getResultList()));
+            log.info("Get all estate currencies");
+        }
+        catch (Exception ex){
+            log.error("Get Estate currency error: " +ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return estateCurrencies;
     }
 }

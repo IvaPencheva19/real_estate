@@ -8,6 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class CustomerRepository implements DAORepository<Customer>{
@@ -97,6 +99,27 @@ public class CustomerRepository implements DAORepository<Customer>{
             session.close();
         }
         return retCustomer;
+    }
+
+    @Override
+    public List<Customer> getAll(){
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        List<Customer> customers=new LinkedList<>();
+
+        try{
+            String jql="SELECT c FROM Customer c";
+            customers.addAll((session.createQuery(jql,Customer.class).getResultList()));
+            log.info("Get all customers");
+        }
+        catch (Exception ex){
+            log.error("Get Customer error: " +ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return customers;
     }
 
 }

@@ -1,11 +1,15 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Sale;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class SaleRepository implements DAORepository<Sale>{
     private static final Logger log= Logger.getLogger(SaleRepository.class);
@@ -92,5 +96,25 @@ public class SaleRepository implements DAORepository<Sale>{
             session.close();
         }
         return retSale;
+    }
+
+    public List<Sale> getAll(){
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        List<Sale> sales=new LinkedList<>();
+
+        try{
+            String jql="SELECT s FROM Sale s";
+            sales.addAll((session.createQuery(jql,Sale.class).getResultList()));
+            log.info("Get all sales");
+        }
+        catch (Exception ex){
+            log.error("Get Sale error: " +ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return sales;
     }
 }

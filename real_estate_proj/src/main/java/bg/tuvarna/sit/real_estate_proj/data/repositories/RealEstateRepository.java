@@ -1,11 +1,15 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.EstateType;
 import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class RealEstateRepository implements DAORepository<RealEstate>{
 
@@ -94,5 +98,25 @@ public class RealEstateRepository implements DAORepository<RealEstate>{
             session.close();
         }
         return retRealEstate;
+    }
+
+    public List<RealEstate> getAll(){
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        List<RealEstate> realEstates=new LinkedList<>();
+
+        try{
+            String jql="SELECT r FROM RealEstate r";
+            realEstates.addAll((session.createQuery(jql,RealEstate.class).getResultList()));
+            log.info("Get all real estates");
+        }
+        catch (Exception ex){
+            log.error("Get Real estate error: " +ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return realEstates;
     }
 }
