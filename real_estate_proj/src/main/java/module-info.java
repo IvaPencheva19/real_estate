@@ -12,9 +12,14 @@ module bg.tuvarna.sit.real_estate_proj {
     requires log4j;
     requires java.naming;
     requires org.hibernate.orm.core;
+    requires java.persistence;
 
     opens bg.tuvarna.sit.real_estate_proj to javafx.fxml;
     exports bg.tuvarna.sit.real_estate_proj;
     exports bg.tuvarna.sit.real_estate_proj.application;
     opens bg.tuvarna.sit.real_estate_proj.application to javafx.fxml;
+
+    opens bg.tuvarna.sit.real_estate_proj.data.entities to org.hibernate.orm.core;
+    exports bg.tuvarna.sit.real_estate_proj.data.entities;
+
 }
