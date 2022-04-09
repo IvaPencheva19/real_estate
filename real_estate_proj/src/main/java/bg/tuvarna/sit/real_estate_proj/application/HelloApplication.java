@@ -29,7 +29,7 @@ public class HelloApplication extends Application {
             Scene scene = new Scene(root);
 
             stage.setScene(scene);
-            stage.setResizable(false);
+            stage.setResizable(true);
             /*stage.setMaxWidth(1280);
             stage.setMaxHeight(800);
             stage.setWidth(1280);

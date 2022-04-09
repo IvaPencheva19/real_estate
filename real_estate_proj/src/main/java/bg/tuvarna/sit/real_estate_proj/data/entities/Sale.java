@@ -12,7 +12,7 @@ public class Sale {
     private int idSale;
     @Basic
     @Column(name = "sale_contract")
-    private String name;
+    private String contract;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "real_estate_id", referencedColumnName = "id_estate")
     private RealEstate estate;
@@ -26,8 +26,8 @@ public class Sale {
     private Broker broker;
 
     public Sale(){};
-    public Sale(String name, RealEstate estate, Customer customer, Broker broker) {
-        this.name = name;
+    public Sale(String contract, RealEstate estate, Customer customer, Broker broker) {
+        this.contract = contract;
         this.estate = estate;
         this.customer = customer;
         this.broker = broker;
@@ -41,12 +41,12 @@ public class Sale {
         this.idSale = idSale;
     }
 
-    public String getName() {
-        return name;
+    public String getContract() {
+        return contract;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setContract(String name) {
+        this.contract = name;
     }
 
     public RealEstate getEstate() {
@@ -86,6 +86,6 @@ public class Sale {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idSale, name, estate, customer, broker);
+        return Objects.hash(idSale, contract, estate, customer, broker);
     }
 }

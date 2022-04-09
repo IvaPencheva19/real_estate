@@ -15,4 +15,12 @@ public class Broker extends User {
                          String phone, String email) {
         super(username, password, firstname, lastname, phone, email);
     }
+
+    public Set<Sale> getSales() {
+        return sales;
+    }
+
+    public void setSales(Set<Sale> sales) {
+        this.sales = sales;
+    }
 }
