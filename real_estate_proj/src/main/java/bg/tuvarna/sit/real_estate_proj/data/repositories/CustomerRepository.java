@@ -1,6 +1,7 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.Customer;
 import org.apache.log4j.Logger;
 import org.hibernate.QueryException;
 import org.hibernate.Session;
@@ -9,7 +10,7 @@ import org.hibernate.query.Query;
 
 import java.util.concurrent.ExecutionException;
 
-public class CustomerRepository implements DAORepository{
+public class CustomerRepository implements DAORepository<Customer>{
 
     private static final Logger log= Logger.getLogger(CustomerRepository.class);
 
@@ -81,7 +82,7 @@ public class CustomerRepository implements DAORepository{
         Customer retCustomer;
 
         try{
-            String jql= "SELECT u FROM Customer WHERE idCustomer=:id";
+            String jql= "SELECT u FROM Customer u WHERE idCustomer=:id";
             Query query=session.createQuery(jql, Customer.class);
             query.setParameter("id", id);
             retCustomer=(Customer) query.getSingleResult();
@@ -95,5 +96,7 @@ public class CustomerRepository implements DAORepository{
             transaction.commit();
             session.close();
         }
+        return retCustomer;
     }
+
 }

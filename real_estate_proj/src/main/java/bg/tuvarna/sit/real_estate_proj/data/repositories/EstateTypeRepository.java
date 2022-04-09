@@ -1,12 +1,13 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.EstateType;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-public class EstateTypeRepository implements DAORepository{
+public class EstateTypeRepository implements DAORepository<EstateType>{
 
     private static final Logger log= Logger.getLogger(EstateTypeRepository.class);
 
@@ -78,7 +79,7 @@ public class EstateTypeRepository implements DAORepository{
         EstateType retEstateType;
 
         try{
-            String jql= "SELECT u FROM EstateType WHERE idEstateType=:id";
+            String jql= "SELECT u FROM EstateType u WHERE idType=:id";
             Query query=session.createQuery(jql, EstateType.class);
             query.setParameter("id", id);
             retEstateType=(EstateType) query.getSingleResult();
@@ -92,5 +93,6 @@ public class EstateTypeRepository implements DAORepository{
             transaction.commit();
             session.close();
         }
+        return retEstateType;
     }
 }

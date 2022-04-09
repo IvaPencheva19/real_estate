@@ -1,12 +1,13 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.Sale;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-public class SaleRepository implements DAORepository{
+public class SaleRepository implements DAORepository<Sale>{
     private static final Logger log= Logger.getLogger(SaleRepository.class);
 
     public static SaleRepository getInstance(){
@@ -90,5 +91,6 @@ public class SaleRepository implements DAORepository{
             transaction.commit();
             session.close();
         }
+        return retSale;
     }
 }

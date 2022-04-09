@@ -1,13 +1,14 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.User;
 import org.apache.log4j.Logger;
 import org.hibernate.QueryException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-public class UserRepository implements DAORepository{
+public class UserRepository implements DAORepository<User>{
     private static final Logger log= Logger.getLogger(UserRepository.class);
 
     public static UserRepository getInstance(){
@@ -91,6 +92,7 @@ public class UserRepository implements DAORepository{
             transaction.commit();
             session.close();
         }
+        return retUser;
     }
 
 }

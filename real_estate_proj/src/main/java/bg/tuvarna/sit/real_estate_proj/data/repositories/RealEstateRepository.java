@@ -1,12 +1,13 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-public class RealEstateRepository implements DAORepository{
+public class RealEstateRepository implements DAORepository<RealEstate>{
 
     private static final Logger log= Logger.getLogger(RealEstateRepository.class);
 
@@ -78,7 +79,7 @@ public class RealEstateRepository implements DAORepository{
         RealEstate retRealEstate;
 
         try{
-            String jql= "SELECT u FROM RealEstate WHERE idRealEstate=:id";
+            String jql= "SELECT u FROM RealEstate u WHERE idEstate=:id";
             Query query=session.createQuery(jql, RealEstate.class);
             query.setParameter("id", id);
             retRealEstate=(RealEstate) query.getSingleResult();
@@ -92,5 +93,6 @@ public class RealEstateRepository implements DAORepository{
             transaction.commit();
             session.close();
         }
+        return retRealEstate;
     }
 }

@@ -1,12 +1,13 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.EstateCurrency;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-public class EstateCurrencyRepository implements DAORepository{
+public class EstateCurrencyRepository implements DAORepository<EstateCurrency>{
     private static final Logger log= Logger.getLogger(EstateCurrencyRepository.class);
 
     public static EstateCurrencyRepository getInstance(){
@@ -77,7 +78,7 @@ public class EstateCurrencyRepository implements DAORepository{
         EstateCurrency retEstateCurrency;
 
         try{
-            String jql= "SELECT u FROM EstateCurrency WHERE idEstateCurrency=:id";
+            String jql= "SELECT u FROM EstateCurrency u WHERE idCurrency=:id";
             Query query=session.createQuery(jql, EstateCurrency.class);
             query.setParameter("id", id);
             retEstateCurrency=(EstateCurrency) query.getSingleResult();
@@ -91,5 +92,6 @@ public class EstateCurrencyRepository implements DAORepository{
             transaction.commit();
             session.close();
         }
+        return retEstateCurrency;
     }
 }

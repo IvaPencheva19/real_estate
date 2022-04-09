@@ -1,12 +1,13 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.EstateCity;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-public class EstateCityRepository implements DAORepository {
+public class EstateCityRepository implements DAORepository<EstateCity> {
     private static final Logger log= Logger.getLogger(EstateCityRepository.class);
 
     public static EstateCityRepository getInstance(){
@@ -77,19 +78,20 @@ public class EstateCityRepository implements DAORepository {
         EstateCity retEstateCity;
 
         try{
-            String jql= "SELECT u FROM EstateCity WHERE idEstateCity=:id";
+            String jql= "SELECT u FROM EstateCity u WHERE idCity=:id";
             Query query=session.createQuery(jql, EstateCity.class);
             query.setParameter("id", id);
-            retEstateCity=(EstateCuty) query.getSingleResult();
+            retEstateCity=(EstateCity) query.getSingleResult();
             log.info("Get estate city by id");
         }
         catch (Exception ex){
-            retCustomer=null;
+            retEstateCity=null;
             log.error(("Get estate city error: "+ ex.getMessage()));
         }
         finally {
             transaction.commit();
             session.close();
         }
+        return retEstateCity;
     }
 }
