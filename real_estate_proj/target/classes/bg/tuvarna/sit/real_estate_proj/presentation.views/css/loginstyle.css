@@ -4,12 +4,8 @@
     -fx-min-width: 300px;
     -fx-max-width: 300px;
     -fx-text-fill: white;
-
-
 }
-.button:hover{
 
-}
 #pane{
     -fx-background-color: white;
 }

@@ -1,0 +1,16 @@
+#menuLog{
+    -fx-background-color: #737373;
+}
+#menuButton{
+    -fx-background-color: #737373;
+}
+.button{
+    -fx-background-color: #84e1e1;
+    -fx-text-fill: #737373;
+    -fx-font-weight: 800;
+    -fx-border-width: 0px 0px 2px 0px;
+    /*-fx-border-color: #46d2d2;*/
+}
+.button:hover{
+    -fx-background-color: #46d2d2;
+}

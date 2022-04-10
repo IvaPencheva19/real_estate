@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="780.0" prefWidth="1280.0" stylesheets="@css/menu.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.MenuAdminController">
+   <children>
+      <Pane id="menuButton" layoutX="-1.0" layoutY="60.0" prefHeight="720.0" prefWidth="200.0">
+         <children>
+            <Button layoutX="-2.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="ADD NEW ESTATE" />
+            <Button layoutX="-2.0" layoutY="73.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="UPDATE/DELETE ESTATE" />
+            <Button layoutX="-2.0" layoutY="146.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="VIEW ALL ESTATES" />
+            <Button layoutX="-1.0" layoutY="219.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="ADD BROKER" />
+            <Button layoutX="-1.0" layoutY="292.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="UPDATE/DELETE BROKER" />
+            <Button layoutX="-1.0" layoutY="365.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="VIEW ALL BROKERS" />
+            <Button layoutX="-1.0" layoutY="439.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="MANAGE ADMINS" />
+         </children></Pane>
+      <Pane id="menuLog" prefHeight="60.0" prefWidth="1280.0">
+         <children>
+            <Label layoutX="62.0" layoutY="11.0" text="Label">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Button layoutX="1082.0" layoutY="12.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="125.0" text="LOG OUT" />
+   </children>
+</AnchorPane>
