@@ -1,0 +1,15 @@
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed java.lang.NoClassDefFoundError: java/sql/SQLException
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate.eventCity in bg.tuvarna.sit.real_estate_proj.data.entities.EstateCity.estates
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate.eventCurrency in bg.tuvarna.sit.real_estate_proj.data.entities.EstateCurrency.estates
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query

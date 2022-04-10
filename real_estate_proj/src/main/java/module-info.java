@@ -13,6 +13,7 @@ module bg.tuvarna.sit.real_estate_proj {
     requires java.naming;
     requires org.hibernate.orm.core;
     requires java.persistence;
+    requires java.sql;
 
    /* opens bg.tuvarna.sit.real_estate_proj to javafx.fxml;
     exports bg.tuvarna.sit.real_estate_proj;*/

@@ -16,10 +16,10 @@ public class UserRepository implements DAORepository<User>{
     private static final Logger log= Logger.getLogger(UserRepository.class);
 
     public static UserRepository getInstance(){
-        return UserRepository.TicketsRepositoryHolder.INSTANCE;
+        return UserRepository.UserRepositoryHolder.INSTANCE;
     }
 
-    private static class TicketsRepositoryHolder {
+    private static class UserRepositoryHolder {
 
         public static UserRepository INSTANCE=new UserRepository();
     }

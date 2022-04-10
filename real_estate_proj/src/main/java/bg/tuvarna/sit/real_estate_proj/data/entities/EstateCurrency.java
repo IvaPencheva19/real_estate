@@ -18,7 +18,7 @@ public class EstateCurrency {
     @Column(name = "currency")
     private String currency;
 
-    @OneToMany(mappedBy = "eventCurrency",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "estateCurrency",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<RealEstate> estates=new HashSet<>();
 
     public EstateCurrency(){}

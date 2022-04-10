@@ -17,7 +17,7 @@ public class EstateCity {
     @Column(name = "city")
     private String city;
 
-    @OneToMany(mappedBy = "eventCity",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "estateCity",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<RealEstate> estates=new HashSet<>();
 
 
