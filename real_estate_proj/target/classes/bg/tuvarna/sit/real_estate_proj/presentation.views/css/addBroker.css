@@ -1,0 +1,21 @@
+#pane{
+    -fx-background-color: white;
+}
+.label{
+    -fx-text-fill: #737373;
+    -fx-font-size: 25px;
+    -fx-font-weight: 650;
+}
+
+.text-field{
+    -fx-border-width: 0px 0px 2px 0px;
+
+    -fx-border-color: #84e1e1;
+}
+
+.button{
+    -fx-background-color: #84e1e1;
+    -fx-text-fill: #737373;
+    -fx-font-weight: 800;
+    -fx-border-width: 0px 0px 2px 0px;
+}
