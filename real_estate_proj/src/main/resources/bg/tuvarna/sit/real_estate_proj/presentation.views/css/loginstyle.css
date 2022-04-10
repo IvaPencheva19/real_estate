@@ -1,0 +1,39 @@
+.button{
+    -fx-background-color: #84e1e1;
+    -fx-background-radius: 35px;
+    -fx-min-width: 300px;
+    -fx-max-width: 300px;
+    -fx-text-fill: white;
+
+
+}
+.button:hover{
+
+}
+#pane{
+    -fx-background-color: white;
+}
+#log{
+    -fx-font-weight: 900;
+
+}
+#tUsername{
+    -fx-font-weight: 900;
+}
+#tPass{
+    -fx-font-weight: 900;
+}
+.text-field{
+    -fx-border-width: 0px 0px 2px 0px;
+
+    -fx-border-color: #84e1e1;
+}
+#bluePane{
+    -fx-background-color: #84e1e1;
+    -fx-background-radius:0px 600px 300px 0px;
+}
+#bluePanet{
+    -fx-background-color: #adebeb
+;
+    -fx-background-radius:0px 200px 300px 0px;
+}
