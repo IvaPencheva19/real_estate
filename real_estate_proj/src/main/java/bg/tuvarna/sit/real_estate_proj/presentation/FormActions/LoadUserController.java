@@ -5,6 +5,8 @@ import bg.tuvarna.sit.real_estate_proj.data.entities.Broker;
 import bg.tuvarna.sit.real_estate_proj.data.entities.User;
 import bg.tuvarna.sit.real_estate_proj.presentation.controllers.AdminAccountController;
 import bg.tuvarna.sit.real_estate_proj.presentation.controllers.BrokerAccountController;
+import bg.tuvarna.sit.real_estate_proj.presentation.controllers.HelloController;
+import bg.tuvarna.sit.real_estate_proj.presentation.controllers.MenuAdminController;
 import javafx.fxml.FXMLLoader;
 
 public class LoadUserController {
@@ -13,7 +15,9 @@ public class LoadUserController {
     {
         if (user instanceof Administrator) {
             loader = OpenForm.openNewForm("AdminAccountForm.fxml", "Admin");
-            AdminAccountController next = loader.getController();
+            AdminAccountController next=loader.getController();
+            next.getMenuController().setUser();
+
         }
         if (user instanceof Broker) {
             loader = OpenForm.openNewForm("BrokerAccountForm.fxml", "Broker");
