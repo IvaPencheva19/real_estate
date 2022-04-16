@@ -8,4 +8,9 @@ public class ShowWarning {
         a.setContentText(warn);
         a.show();
     }
+    public static void showInformation(String warn){
+        Alert a = new Alert(Alert.AlertType.INFORMATION);
+        a.setContentText(warn);
+        a.show();
+    }
 }
