@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -47,6 +48,8 @@
       </children>
    </Pane>
 =======
+=======
+>>>>>>> Stashed changes
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -58,6 +61,9 @@
             fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.UpdateDeleteAdminController"
             prefHeight="400.0" prefWidth="600.0">
     <fx:include fx:id="menu" source="MenuAdmin.fxml" />
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 </AnchorPane>
