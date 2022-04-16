@@ -37,5 +37,13 @@ public class EstateCityService {
     public List<EstateCity> getAllCities(){
         return repository.getAll();
     }
+    public EstateCity getCityById(int id){
+        EstateCity city=repository.getById(id);
+        return city;
+    }
+    public EstateCity getCityByName(String name){
+        EstateCity city=repository.getByName(name);
+        return city;
+    }
 
 }

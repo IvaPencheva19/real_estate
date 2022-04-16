@@ -119,4 +119,30 @@ public class EstateCityRepository implements DAORepository<EstateCity> {
         }
         return estateCities;
     }
+
+
+    public EstateCity getByName(String name){
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+
+        EstateCity retEstateCity;
+
+        try{
+            String jql= "SELECT u FROM EstateCity u WHERE city=:name";
+            Query query=session.createQuery(jql, EstateCity.class);
+            query.setParameter("name", name);
+            retEstateCity=(EstateCity) query.getSingleResult();
+            log.info("Get estate city by id");
+        }
+        catch (Exception ex){
+            retEstateCity=null;
+            log.error(("Get estate city error: "+ ex.getMessage()));
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return retEstateCity;
+    }
 }
+

@@ -45,6 +45,10 @@ public class RealEstate {
     private Integer estateFloors;
 
     @Basic
+    @Column(name = "estate_rooms")
+    private Integer estateRooms;
+
+    @Basic
     @Column(name = "estate_description")
     private String estateDescription;
     @Basic
@@ -59,7 +63,7 @@ public class RealEstate {
     private Set<Sale> sales=new HashSet<>();
 
     public RealEstate(){}
-    public RealEstate(String estateOwner, EstateType estateType, Double estateArea, Double estatePrice, EstateCurrency estateCurrency, EstateCity estateCity, String estateAddress, Integer estateFloors, String estateDescription, Byte estateStatus,Administrator admin) {
+    public RealEstate(String estateOwner, EstateType estateType, Double estateArea, Double estatePrice, EstateCurrency estateCurrency, EstateCity estateCity, String estateAddress, Integer estateFloors,Integer estateRooms, String estateDescription, Byte estateStatus,Administrator admin) {
         this.estateOwner = estateOwner;
         this.estateType = estateType;
         this.estateArea = estateArea;
@@ -68,6 +72,7 @@ public class RealEstate {
         this.estateCity = estateCity;
         this.estateAddress = estateAddress;
         this.estateFloors = estateFloors;
+        this.estateRooms = estateRooms;
         this.estateDescription = estateDescription;
         this.estateStatus = estateStatus;
         this.admin = admin;
@@ -175,6 +180,14 @@ public class RealEstate {
 
     public void setSales(Set<Sale> sales) {
         this.sales = sales;
+    }
+
+    public Integer getEstateRooms() {
+        return estateRooms;
+    }
+
+    public void setEstateRooms(Integer estateRooms) {
+        this.estateRooms = estateRooms;
     }
 
     @Override

@@ -15,24 +15,24 @@
          <Label layoutX="41.0" layoutY="84.0" text="Owner" />
          <Label layoutX="41.0" layoutY="154.0" text="Type" />
          <Label layoutX="41.0" layoutY="224.0" text="Area" />
-         <TextField layoutX="192.0" layoutY="84.0" prefHeight="37.0" prefWidth="305.0" />
-         <TextField layoutX="192.0" layoutY="294.0" prefHeight="37.0" prefWidth="305.0" />
+         <TextField fx:id="owner" layoutX="192.0" layoutY="84.0" prefHeight="37.0" prefWidth="305.0" />
+         <TextField fx:id="price" layoutX="192.0" layoutY="294.0" prefHeight="37.0" prefWidth="305.0" text="0.0" />
          <Label layoutX="41.0" layoutY="294.0" text="Price" />
          <Label layoutX="41.0" layoutY="364.0" text="Currency" />
          <Label layoutX="41.0" layoutY="434.0" text="City" />
          <Label layoutX="41.0" layoutY="504.0" text="Address" />
-         <TextField layoutX="192.0" layoutY="504.0" prefHeight="37.0" prefWidth="305.0" />
-         <Button layoutX="434.0" layoutY="597.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="188.0" text="ADD ESTATE" />
-         <ComboBox layoutX="192.0" layoutY="154.0" prefHeight="37.0" prefWidth="305.0" />
-         <TextField layoutX="192.0" layoutY="224.0" prefHeight="37.0" prefWidth="305.0" />
-         <ComboBox layoutX="192.0" layoutY="434.0" prefHeight="37.0" prefWidth="305.0" />
-         <ComboBox layoutX="192.0" layoutY="364.0" prefHeight="37.0" prefWidth="305.0" />
+         <TextField fx:id="address" layoutX="192.0" layoutY="504.0" prefHeight="37.0" prefWidth="305.0" />
+         <Button layoutX="434.0" layoutY="597.0" mnemonicParsing="false" onAction="#addEstate" prefHeight="54.0" prefWidth="188.0" text="ADD ESTATE" />
+         <ComboBox fx:id="type" layoutX="192.0" layoutY="154.0" prefHeight="37.0" prefWidth="305.0" />
+         <TextField fx:id="area" layoutX="192.0" layoutY="224.0" prefHeight="37.0" prefWidth="305.0" text="0.0" />
+         <ComboBox fx:id="city" layoutX="192.0" layoutY="434.0" prefHeight="37.0" prefWidth="305.0" />
+         <ComboBox fx:id="currency" layoutX="192.0" layoutY="364.0" prefHeight="37.0" prefWidth="305.0" />
          <Label layoutX="576.0" layoutY="84.0" text="Floors" />
          <Label layoutX="576.0" layoutY="154.0" text="Rooms" />
          <Label layoutX="576.0" layoutY="224.0" text="Description" />
-         <TextField layoutX="734.0" layoutY="84.0" prefHeight="37.0" prefWidth="305.0" />
-         <TextField layoutX="734.0" layoutY="154.0" prefHeight="37.0" prefWidth="305.0" />
-         <TextArea layoutX="573.0" layoutY="281.0" prefHeight="260.0" prefWidth="469.0" />
+         <TextField fx:id="floors" layoutX="734.0" layoutY="84.0" prefHeight="37.0" prefWidth="305.0" text="0" />
+         <TextField fx:id="rooms" layoutX="734.0" layoutY="154.0" prefHeight="37.0" prefWidth="305.0" text="0" />
+         <TextArea fx:id="description" layoutX="573.0" layoutY="281.0" prefHeight="260.0" prefWidth="469.0" />
       </children>
    </Pane>
 </AnchorPane>

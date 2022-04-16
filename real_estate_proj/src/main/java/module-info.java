@@ -24,5 +24,7 @@ module bg.tuvarna.sit.real_estate_proj {
     exports bg.tuvarna.sit.real_estate_proj.data.entities;
     exports bg.tuvarna.sit.real_estate_proj.presentation.controllers;
     opens bg.tuvarna.sit.real_estate_proj.presentation.controllers to javafx.fxml;
+    exports bg.tuvarna.sit.real_estate_proj.presentation.models;
+    opens bg.tuvarna.sit.real_estate_proj.presentation.models to javafx.fxml;
 
 }

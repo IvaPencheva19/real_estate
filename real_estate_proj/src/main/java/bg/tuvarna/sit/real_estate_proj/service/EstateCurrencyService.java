@@ -39,4 +39,12 @@ public class EstateCurrencyService {
     public List<EstateCurrency> getAllCurrency(){
         return repository.getAll();
     }
+    public EstateCurrency getCurrencyById(int id){
+        EstateCurrency currency=repository.getById(id);
+        return currency;
+    }
+    public EstateCurrency getCurrencyByName(String name){
+        EstateCurrency currency=repository.getByName(name);
+        return currency;
+    }
 }

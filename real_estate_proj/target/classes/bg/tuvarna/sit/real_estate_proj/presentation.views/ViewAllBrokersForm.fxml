@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllBrokersController">
+    <fx:include fx:id="menu" source="MenuAdmin.fxml" />
+   <Pane layoutX="199.0" layoutY="61.0" prefHeight="719.0" prefWidth="1081.0" />
+   <TableView id="brokerTable" layoutX="223.0" layoutY="160.0" prefHeight="525.0" prefWidth="1034.0" stylesheets="@css/viewAllBrokers.css">
+      <columns>
+         <TableColumn prefWidth="175.19992065429688" text="USERNAME" />
+         <TableColumn minWidth="0.0" prefWidth="181.60003662109375" text="FIRST NAME" />
+         <TableColumn prefWidth="210.4000244140625" text="LAST NAME" />
+         <TableColumn prefWidth="223.7333984375" text="PHONE" />
+         <TableColumn prefWidth="244.53326416015625" text="EMAIL" />
+      </columns>
+   </TableView>
+
+</AnchorPane>

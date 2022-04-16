@@ -119,4 +119,28 @@ public class EstateTypeRepository implements DAORepository<EstateType>{
         }
         return estateTypes;
     }
+
+    public EstateType getByName(String name){
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+
+        EstateType retEstateType;
+
+        try{
+            String jql= "SELECT u FROM EstateType u WHERE type=:name";
+            Query query=session.createQuery(jql, EstateType.class);
+            query.setParameter("name", name);
+            retEstateType=(EstateType) query.getSingleResult();
+            log.info("Get estate type by name");
+        }
+        catch (Exception ex){
+            retEstateType=null;
+            log.error(("Get estate type error: "+ ex.getMessage()));
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return retEstateType;
+    }
 }

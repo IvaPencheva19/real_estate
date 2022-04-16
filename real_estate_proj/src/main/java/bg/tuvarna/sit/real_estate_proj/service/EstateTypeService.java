@@ -1,5 +1,6 @@
 package bg.tuvarna.sit.real_estate_proj.service;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Customer;
+import bg.tuvarna.sit.real_estate_proj.data.entities.EstateCity;
 import bg.tuvarna.sit.real_estate_proj.data.entities.EstateType;
 import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import bg.tuvarna.sit.real_estate_proj.data.repositories.EstateTypeRepository;
@@ -36,5 +37,13 @@ public class EstateTypeService {
     }
     public List<EstateType> getAllTypes(){
         return repository.getAll();
+    }
+    public EstateType getTypeById(int id){
+        EstateType type=repository.getById(id);
+        return type;
+    }
+    public EstateType getTypeByName(String name){
+        EstateType type=repository.getByName(name);
+        return type;
     }
 }

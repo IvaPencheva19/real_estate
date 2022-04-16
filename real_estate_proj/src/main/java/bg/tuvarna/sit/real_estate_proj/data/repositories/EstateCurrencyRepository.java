@@ -118,4 +118,29 @@ public class EstateCurrencyRepository implements DAORepository<EstateCurrency>{
         }
         return estateCurrencies;
     }
+
+
+    public EstateCurrency getByName(String name){
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+
+        EstateCurrency retEstateCurrency;
+
+        try{
+            String jql= "SELECT u FROM EstateCurrency u WHERE currency=:name";
+            Query query=session.createQuery(jql, EstateCurrency.class);
+            query.setParameter("name", name);
+            retEstateCurrency=(EstateCurrency) query.getSingleResult();
+            log.info("Get estate currency by id");
+        }
+        catch (Exception ex){
+            retEstateCurrency=null;
+            log.error(("Get estate currency error: "+ ex.getMessage()));
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return retEstateCurrency;
+    }
 }

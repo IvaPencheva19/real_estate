@@ -16,7 +16,7 @@ public class LoadUserController {
         if (user instanceof Administrator) {
             loader = OpenForm.openNewForm("AdminAccountForm.fxml", "Admin");
             AdminAccountController next=loader.getController();
-            next.getMenuController().setUser();
+           // next.getMenuController().setUser();
 
         }
         if (user instanceof Broker) {

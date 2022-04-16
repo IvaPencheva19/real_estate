@@ -15,3 +15,4 @@
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: org.hibernate.WrongClassException: Object [id=1] was not of the specified subclass [bg.tuvarna.sit.real_estate_proj.data.entities.User] : Discriminator: null
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: org.hibernate.WrongClassException: Object [id=1] was not of the specified subclass [bg.tuvarna.sit.real_estate_proj.data.entities.User] : Discriminator: null
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
