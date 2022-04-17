@@ -1,0 +1,7 @@
+.label{
+    -fx-text-fill: #737373;
+    -fx-font-size: 18px;
+}
+#pane{
+    -fx-background-color: white;
+}

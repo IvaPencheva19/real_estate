@@ -31,19 +31,13 @@ public class MenuAdminController {
         next.loadTable();
         CloseForm.closeForm(event);
     }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
     public void viewAllBrokers(ActionEvent event){
-        loader = OpenForm.openNewForm("ViewAllBrokers.fxml", "View all brokers");
+        loader = OpenForm.openNewForm("ViewAllBrokersForm.fxml", "View all brokers");
         ViewAllBrokersController next = loader.getController();
        // next.loadTable();
         CloseForm.closeForm(event);
     }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-
     public void logOut(ActionEvent event){
         loader = OpenForm.openNewForm("hello-view.fxml", "Login");
         CloseForm.closeForm(event);

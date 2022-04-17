@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllBrokersController">
+    <fx:include fx:id="menu" source="MenuBroker.fxml" />
+   <Pane layoutX="198.0" layoutY="60.0" prefHeight="718.0" prefWidth="1082.0">
+      <children>
+         <TableView id="adminTable" layoutX="23.0" layoutY="104.0" prefHeight="525.0" prefWidth="1034.0" stylesheets="@css/viewAllEstates.css">
+            <columns>
+               <TableColumn prefWidth="48.4000244140625" text="ID" />
+               <TableColumn prefWidth="132.53330993652344" text="OWNER" />
+               <TableColumn minWidth="0.0" prefWidth="96.79995727539062" text="TYPE" />
+               <TableColumn prefWidth="62.4000244140625" text="AREA" />
+               <TableColumn prefWidth="71.199951171875" text="PRICE" />
+               <TableColumn prefWidth="79.46661376953125" text="CURRENCY" />
+               <TableColumn prefWidth="103.7332763671875" text="CITY" />
+               <TableColumn prefWidth="115.7333984375" text="ADDRESS" />
+               <TableColumn prefWidth="61.06671142578125" text="FLOORS" />
+               <TableColumn prefWidth="59.20001220703125" text="ROOMS" />
+               <TableColumn prefWidth="137.59991455078125" text="DESCRIPTION" />
+               <TableColumn prefWidth="61.333251953125" text="STATUS" />
+            </columns>
+         </TableView>
+      </children>
+   </Pane>
+
+</AnchorPane>

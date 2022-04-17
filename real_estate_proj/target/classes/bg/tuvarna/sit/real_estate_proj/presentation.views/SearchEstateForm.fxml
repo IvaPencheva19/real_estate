@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.SearchEstateController">
+    <fx:include fx:id="menu" source="MenuBroker.fxml" />
+   <Pane id="pane" layoutX="200.0" layoutY="60.0" prefHeight="719.0" prefWidth="1078.0" stylesheets="@css/searchEstate.css">
+      <children>
+         <TableView id="adminTable" layoutX="24.0" layoutY="413.0" prefHeight="272.0" prefWidth="1032.0" stylesheets="@css/viewAllEstates.css">
+            <columns>
+               <TableColumn prefWidth="48.4000244140625" text="ID" />
+               <TableColumn prefWidth="132.53330993652344" text="OWNER" />
+               <TableColumn minWidth="0.0" prefWidth="96.79995727539062" text="TYPE" />
+               <TableColumn prefWidth="62.4000244140625" text="AREA" />
+               <TableColumn prefWidth="71.199951171875" text="PRICE" />
+               <TableColumn prefWidth="79.46661376953125" text="CURRENCY" />
+               <TableColumn prefWidth="103.7332763671875" text="CITY" />
+               <TableColumn prefWidth="115.7333984375" text="ADDRESS" />
+               <TableColumn prefWidth="61.06671142578125" text="FLOORS" />
+               <TableColumn prefWidth="59.20001220703125" text="ROOMS" />
+               <TableColumn prefWidth="137.59991455078125" text="DESCRIPTION" />
+               <TableColumn prefWidth="61.333251953125" text="STATUS" />
+            </columns>
+         </TableView>
+         <Label layoutX="193.0" layoutY="82.0" text="Search estate by criterion">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <ComboBox layoutX="499.0" layoutY="72.0" prefHeight="35.0" prefWidth="388.0" />
+         <Label layoutX="197.0" layoutY="172.0" text="Input value">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <TextField layoutX="499.0" layoutY="170.0" prefHeight="36.0" prefWidth="389.0" />
+         <Button layoutX="442.0" layoutY="293.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="163.0" text="SEARCH">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+      </children>
+   </Pane>
+
+</AnchorPane>

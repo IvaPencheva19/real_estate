@@ -5,28 +5,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllEstatesController">
-    <fx:include fx:id="menu" source="MenuAdmin.fxml" />
-   <Pane layoutX="200.0" layoutY="60.0" prefHeight="719.0" prefWidth="1079.0" stylesheets="@css/viewAllEstates.css" />
-   <TableView id="adminTable" layoutX="222.0" layoutY="181.0" prefHeight="525.0" prefWidth="1034.0" stylesheets="@css/viewAllEstates.css">
-      <columns>
-         <TableColumn prefWidth="143.1999969482422" text="OWNER" />
-         <TableColumn minWidth="0.0" prefWidth="94.933349609375" text="TYPE" />
-         <TableColumn prefWidth="80.26657104492188" text="AREA" />
-         <TableColumn prefWidth="73.60003662109375" text="PRICE" />
-         <TableColumn prefWidth="70.933349609375" text="CURRENCY" />
-         <TableColumn prefWidth="115.19989013671875" text="CITY" />
-         <TableColumn prefWidth="95.4666748046875" text="ADDRESS" />
-         <TableColumn prefWidth="51.466796875" text="FLOORS" />
-         <TableColumn prefWidth="56.2666015625" text="ROOMS" />
-         <TableColumn prefWidth="177.86676025390625" text="DESCRIPTION" />
-         <TableColumn prefWidth="71.7333984375" text="STATUS" />
-=======
-=======
->>>>>>> Stashed changes
+
 <AnchorPane prefHeight="780.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllEstatesController">
+
     <fx:include fx:id="menu" source="MenuAdmin.fxml" />
    <Pane layoutX="199.0" layoutY="46.0" prefHeight="719.0" prefWidth="1079.0" stylesheets="@css/viewAllEstates.css" />
    <TableView id="adminTable" fx:id="estatesTable" layoutX="222.0" layoutY="150.0" prefHeight="575.0" prefWidth="1000.0" stylesheets="@css/viewAllEstates.css">
@@ -34,19 +15,15 @@
          <TableColumn fx:id="idCol" prefWidth="34.66661071777344" text="id" />
          <TableColumn fx:id="ownerCol" prefWidth="150.40008544921875" text="OWNER" />
          <TableColumn fx:id="typeCol" minWidth="0.0" prefWidth="91.199951171875" text="TYPE" />
-         <TableColumn fx:id="areaCol" prefWidth="75.9998779296875" text="AREA" />
-         <TableColumn fx:id="priceCol" prefWidth="100.8001708984375" text="PRICE" />
-         <TableColumn fx:id="currencyCol" minWidth="0.0" prefWidth="69.5999755859375" text="CURRENCY" />
-         <TableColumn fx:id="cityCol" prefWidth="188.7999267578125" text="CITY" />
+         <TableColumn fx:id="areaCol" prefWidth="92.00003051757812" text="AREA" />
+         <TableColumn fx:id="priceCol" prefWidth="103.2000732421875" text="PRICE" />
+         <TableColumn fx:id="currencyCol" minWidth="0.0" prefWidth="84.0" text="CURRENCY" />
+         <TableColumn fx:id="cityCol" prefWidth="156.7999267578125" text="CITY" />
          <TableColumn fx:id="addressCol" prefWidth="235.99993896484375" text="ADDRESS" />
          <TableColumn fx:id="floorsCol" minWidth="0.0" prefWidth="66.4000244140625" text="FLOORS" />
          <TableColumn fx:id="roomsCol" prefWidth="95.199951171875" text="ROOMS" />
          <TableColumn fx:id="descriptionCol" minWidth="0.0" prefWidth="322.4000244140625" text="DESCRIPTION" />
          <TableColumn fx:id="statusCol" minWidth="0.0" prefWidth="79.20000000000005" text="STATUS" />
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
       </columns>
    </TableView>
 </AnchorPane>
