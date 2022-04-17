@@ -28,11 +28,15 @@ public class RealEstateService {
         estate.setEstateType(type);
         repository.update(estate);
     }
-    public void changeEstateArea(RealEstate estate, Double area){
+    public void changeEstateArea(RealEstate estate, Double area) {
         estate.setEstateArea(area);
         repository.update(estate);
     }
-    public void changeEstateArea(RealEstate estate, EstateCurrency currency){
+        public void changeEstatePrice(RealEstate estate, Double price){
+            estate.setEstatePrice(price);
+            repository.update(estate);
+    }
+    public void changeEstateCurrency(RealEstate estate, EstateCurrency currency){
         estate.setEstateCurrency(currency);
         repository.update(estate);
     }
@@ -46,6 +50,14 @@ public class RealEstateService {
     }
     public void changeEstateFloors(RealEstate estate, Integer floors){
         estate.setEstateFloors(floors);
+        repository.update(estate);}
+
+        public void changeEstateRooms(RealEstate estate, Integer rooms){
+            estate.setEstateRooms(rooms);
+            repository.update(estate);
+    }
+    public void changeEstateDescription(RealEstate estate, String desc){
+        estate.setEstateDescription(desc);
         repository.update(estate);
     }
     public void changeEstateStatus(RealEstate estate, Byte status){
@@ -58,6 +70,9 @@ public class RealEstateService {
     }
     public List<RealEstate> getAllEstates(){
         return repository.getAll();
+    }
+    public RealEstate getById(Integer id){
+        return repository.getById(id);
     }
 
 }

@@ -11,12 +11,11 @@
       <Pane id="menuButton" layoutX="-1.0" layoutY="60.0" prefHeight="720.0" prefWidth="200.0">
          <children>
             <Button layoutX="-2.0" mnemonicParsing="false" onAction="#addEstate" prefHeight="73.0" prefWidth="202.0" text="ADD NEW ESTATE" />
-            <Button layoutX="-2.0" layoutY="73.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="UPDATE/DELETE ESTATE" />
+            <Button layoutX="-2.0" layoutY="73.0" mnemonicParsing="false" onAction="#updateDeleteEstate" prefHeight="73.0" prefWidth="202.0" text="UPDATE/DELETE ESTATE" />
             <Button layoutX="-2.0" layoutY="146.0" mnemonicParsing="false" onAction="#viewAllEstates" prefHeight="73.0" prefWidth="202.0" text="VIEW ALL ESTATES" />
             <Button layoutX="-1.0" layoutY="219.0" mnemonicParsing="false" onAction="#addBroker" prefHeight="73.0" prefWidth="202.0" text="ADD BROKER" />
-            <Button layoutX="-1.0" layoutY="292.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="UPDATE/DELETE BROKER" />
+            <Button layoutX="-1.0" layoutY="292.0" mnemonicParsing="false" onAction="#updateDeleteBroker" prefHeight="73.0" prefWidth="202.0" text="UPDATE/DELETE BROKER" />
             <Button layoutX="-1.0" layoutY="365.0" mnemonicParsing="false" onAction="#viewAllBrokers" prefHeight="73.0" prefWidth="202.0" text="VIEW ALL BROKERS" />
-            <Button layoutX="-1.0" layoutY="439.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="MANAGE ADMINS" />
          </children></Pane>
       <Pane id="menuLog" prefHeight="60.0" prefWidth="1280.0">
          <children>

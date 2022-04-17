@@ -6,6 +6,8 @@ import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Sale;
 import bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository;
 
+import java.util.List;
+
 public class BrokerService {
     private final UserRepository repository = UserRepository.getInstance();
 
@@ -57,4 +59,11 @@ public class BrokerService {
         broker.getSales().remove(sale);
         repository.update(broker);
     }
+    public List<Broker> getAllBrokers(){
+       return repository.getAllBrokers();
+    }
+    public Broker getByUsername(String username){
+        return (Broker)repository.getByUsername(username);
+    }
+
 }

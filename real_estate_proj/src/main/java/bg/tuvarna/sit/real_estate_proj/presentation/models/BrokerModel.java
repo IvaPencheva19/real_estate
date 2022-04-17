@@ -1,11 +1,9 @@
 package bg.tuvarna.sit.real_estate_proj.presentation.models;
 
-import bg.tuvarna.sit.real_estate_proj.data.entities.Administrator;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Broker;
 
 public class BrokerModel {
     private String username;
-
     private String firstname;
     private String lastname;
     private String phone;
@@ -15,6 +13,7 @@ public class BrokerModel {
         username=broker.getUsername();
         firstname=broker.getFirstname();
         lastname=broker.getLastname();
+        phone=broker.getPhone();
         email=broker.getEmail();
     }
 

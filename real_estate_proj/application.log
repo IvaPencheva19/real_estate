@@ -16,3 +16,12 @@
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: org.hibernate.WrongClassException: Object [id=1] was not of the specified subclass [bg.tuvarna.sit.real_estate_proj.data.entities.User] : Discriminator: null
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: org.hibernate.WrongClassException: Object [id=1] was not of the specified subclass [bg.tuvarna.sit.real_estate_proj.data.entities.User] : Discriminator: null
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - User delete error attempt to create delete event with null entity
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: No entity found for query

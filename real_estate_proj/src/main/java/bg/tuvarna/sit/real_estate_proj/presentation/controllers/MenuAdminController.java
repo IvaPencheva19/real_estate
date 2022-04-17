@@ -35,7 +35,25 @@ public class MenuAdminController {
     public void viewAllBrokers(ActionEvent event){
         loader = OpenForm.openNewForm("ViewAllBrokersForm.fxml", "View all brokers");
         ViewAllBrokersController next = loader.getController();
-       // next.loadTable();
+        next.loadTable();
+        CloseForm.closeForm(event);
+    }
+    public void manageAdmins(ActionEvent event){
+        loader = OpenForm.openNewForm("ManageAdminsForm.fxml", "Manage admins");
+        ManageAdminController next = loader.getController();
+        next.loadTable();
+        CloseForm.closeForm(event);
+    }
+    public void updateDeleteBroker(ActionEvent event){
+        loader = OpenForm.openNewForm("UpdateDeleteBrokersForm.fxml", "Manage brokers");
+       UpdateDeleteBrokersController next = loader.getController();
+        next.loadCombo();
+        CloseForm.closeForm(event);
+    }
+    public void updateDeleteEstate(ActionEvent event){
+        loader = OpenForm.openNewForm("UpdateDeleteEstatesForm.fxml", "Manage estates");
+        UpdateDeleteEstatesController next = loader.getController();
+        next.loadCombo();
         CloseForm.closeForm(event);
     }
     public void logOut(ActionEvent event){

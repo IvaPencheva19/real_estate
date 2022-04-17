@@ -1,6 +1,8 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.Administrator;
+import bg.tuvarna.sit.real_estate_proj.data.entities.Broker;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Sale;
 import bg.tuvarna.sit.real_estate_proj.data.entities.User;
 import org.apache.log4j.Logger;
@@ -140,5 +142,47 @@ public class UserRepository implements DAORepository<User>{
         }
         return retUser;
     }
+
+    public List<Broker> getAllBrokers() {
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        List<Broker>users=new LinkedList<>();
+
+        try {
+            String jql = "SELECT o FROM Broker o";
+            javax.persistence.Query query = session.createQuery(jql);
+            users.addAll(session.createQuery(jql, Broker.class).getResultList());
+            log.info("Get all brokers");
+        }
+        catch (Exception ex){
+            log.error("Get Broker error: " +ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return users;
+    }
+    public List<Administrator> getAllAdministrators() {
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        List<Administrator>users=new LinkedList<>();
+
+        try {
+            String jql = "SELECT o FROM Administrator o";
+            javax.persistence.Query query = session.createQuery(jql);
+            users.addAll(session.createQuery(jql, Administrator.class).getResultList());
+            log.info("Get all brokers");
+        }
+        catch (Exception ex){
+            log.error("Get Administrator error: " +ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return users;
+    }
+
 
 }

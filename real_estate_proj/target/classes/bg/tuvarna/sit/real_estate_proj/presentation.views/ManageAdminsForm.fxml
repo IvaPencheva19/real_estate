@@ -21,13 +21,13 @@
                <Font size="20.0" />
             </font>
          </Button>
-         <TableView id="adminTable" layoutX="24.0" layoutY="171.0" prefHeight="525.0" prefWidth="1034.0">
+         <TableView id="adminTable" fx:id="tableAdmins" layoutX="24.0" layoutY="171.0" prefHeight="525.0" prefWidth="1034.0">
            <columns>
-             <TableColumn prefWidth="175.19992065429688" text="USERNAME" />
-             <TableColumn minWidth="0.0" prefWidth="181.60003662109375" text="FIRST NAME" />
-               <TableColumn prefWidth="210.4000244140625" text="LAST NAME" />
-               <TableColumn prefWidth="223.7333984375" text="PHONE" />
-               <TableColumn prefWidth="244.53326416015625" text="EMAIL" />
+             <TableColumn fx:id="usernameCol" prefWidth="175.19992065429688" text="USERNAME" />
+             <TableColumn fx:id="firstNameCol" minWidth="0.0" prefWidth="181.60003662109375" text="FIRST NAME" />
+               <TableColumn fx:id="lastNameCol" prefWidth="210.4000244140625" text="LAST NAME" />
+               <TableColumn fx:id="phoneCol" prefWidth="223.7333984375" text="PHONE" />
+               <TableColumn fx:id="emailCol" prefWidth="244.53326416015625" text="EMAIL" />
            </columns>
          </TableView>
       </children>

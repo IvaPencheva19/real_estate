@@ -1,8 +1,11 @@
 package bg.tuvarna.sit.real_estate_proj.service;
 
 import bg.tuvarna.sit.real_estate_proj.data.entities.Administrator;
+import bg.tuvarna.sit.real_estate_proj.data.entities.Broker;
 import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository;
+
+import java.util.List;
 
 public class AdminService {
     private final UserRepository repository = UserRepository.getInstance();
@@ -54,6 +57,9 @@ public class AdminService {
     public void removeEstate(Administrator adm, RealEstate estate) {
         adm.getEstates().remove(estate);
         repository.update(adm);
+    }
+    public List<Administrator> getAllAdministrators(){
+        return repository.getAllAdministrators();
     }
 
 }
