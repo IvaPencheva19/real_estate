@@ -6,12 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 
 
-<<<<<<< Updated upstream
 <AnchorPane prefHeight="780.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllEstatesController">
-=======
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllEstatesController">
-
->>>>>>> Stashed changes
 
     <fx:include fx:id="menu" source="MenuAdmin.fxml" />
    <Pane layoutX="199.0" layoutY="46.0" prefHeight="719.0" prefWidth="1079.0" stylesheets="@css/viewAllEstates.css" />

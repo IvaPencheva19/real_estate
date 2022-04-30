@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.AddBrokerController">
     <fx:include fx:id="menu" source="MenuAdmin.fxml" />
@@ -25,7 +26,10 @@
          <TextField fx:id="lastName" layoutX="477.0" layoutY="364.0" prefHeight="37.0" prefWidth="305.0" />
          <TextField fx:id="phone" layoutX="477.0" layoutY="434.0" prefHeight="37.0" prefWidth="305.0" />
          <TextField fx:id="email" layoutX="477.0" layoutY="504.0" prefHeight="37.0" prefWidth="305.0" />
-         <Button layoutX="425.0" layoutY="582.0" mnemonicParsing="false" onAction="#addBroker" prefHeight="54.0" prefWidth="188.0" text="ADD BROKER" />
+         <Button layoutX="425.0" layoutY="582.0" mnemonicParsing="false" onAction="#addBroker" prefHeight="54.0" prefWidth="188.0" text="ADD BROKER">
+            <font>
+               <Font size="18.0" />
+            </font></Button>
       </children>
    </Pane>
 </AnchorPane>
