@@ -18,8 +18,7 @@ public class EstateCurrency {
     @Column(name = "currency")
     private String currency;
 
-    @OneToMany(mappedBy = "estateCurrency",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<RealEstate> estates=new HashSet<>();
+
 
     public EstateCurrency(){}
     public EstateCurrency(String currency) {
@@ -42,13 +41,6 @@ public class EstateCurrency {
         this.currency = currency;
     }
 
-    public Set<RealEstate> getEstates() {
-        return estates;
-    }
-
-    public void setEstates(Set<RealEstate> estates) {
-        this.estates = estates;
-    }
 
     @Override
     public boolean equals(Object o) {

@@ -8,9 +8,12 @@
 
 <AnchorPane prefHeight="780.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllEstatesController">
 
+
+
+
     <fx:include fx:id="menu" source="MenuAdmin.fxml" />
    <Pane layoutX="199.0" layoutY="46.0" prefHeight="719.0" prefWidth="1079.0" stylesheets="@css/viewAllEstates.css" />
-   <TableView id="adminTable" fx:id="estatesTable" layoutX="222.0" layoutY="150.0" prefHeight="575.0" prefWidth="1000.0" stylesheets="@css/viewAllEstates.css">
+   <TableView id="adminTable" fx:id="estatesTable" layoutX="232.0" layoutY="148.0" prefHeight="575.0" prefWidth="1000.0" stylesheets="@css/viewAllEstates.css">
       <columns>
          <TableColumn fx:id="idCol" prefWidth="34.66661071777344" text="id" />
          <TableColumn fx:id="ownerCol" prefWidth="150.40008544921875" text="OWNER" />

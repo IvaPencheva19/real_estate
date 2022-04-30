@@ -10,10 +10,10 @@
    <children>
       <Pane id="menuButton" layoutX="-1.0" layoutY="60.0" prefHeight="720.0" prefWidth="200.0">
          <children>
-            <Button layoutX="-2.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="VIEW ALL ESTATES" />
-            <Button layoutX="-2.0" layoutY="71.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="SEARCH ESTATE" />
-            <Button layoutX="-2.0" layoutY="144.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="SELL ESTATE" />
-            <Button layoutX="-1.0" layoutY="217.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="202.0" text="VIEW ALL SALES" />
+            <Button layoutX="-2.0" mnemonicParsing="false" onAction="#viewAllEstates" prefHeight="73.0" prefWidth="202.0" text="VIEW ALL ESTATES" />
+            <Button layoutX="-2.0" layoutY="71.0" mnemonicParsing="false" onAction="#searchEstate" prefHeight="73.0" prefWidth="202.0" text="SEARCH ESTATE" />
+            <Button layoutX="-2.0" layoutY="144.0" mnemonicParsing="false" onAction="#sellEstate" prefHeight="73.0" prefWidth="202.0" text="SELL ESTATE" />
+            <Button layoutX="-1.0" layoutY="217.0" mnemonicParsing="false" onAction="#viewAllSales" prefHeight="73.0" prefWidth="202.0" text="VIEW ALL SALES" />
          </children>
       </Pane>
       <Pane id="menuLog" prefHeight="60.0" prefWidth="1280.0">
@@ -25,6 +25,6 @@
             </Label>
          </children>
       </Pane>
-      <Button layoutX="1082.0" layoutY="12.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="125.0" text="LOG OUT" />
+      <Button layoutX="1082.0" layoutY="12.0" mnemonicParsing="false" onAction="#logOut" prefHeight="37.0" prefWidth="125.0" text="LOG OUT" />
    </children>
 </AnchorPane>

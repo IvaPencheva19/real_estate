@@ -64,15 +64,45 @@ public class RealEstateService {
         estate.setEstateStatus(status);
         repository.update(estate);
     }
-    public void addSale(RealEstate estate, Sale sale) {
-        estate.getSales().add(sale);
-        repository.update(estate);
-    }
+
     public List<RealEstate> getAllEstates(){
         return repository.getAll();
     }
     public RealEstate getById(Integer id){
         return repository.getById(id);
     }
+    public List<RealEstate> getAllEstatesByOwner(String owner){
+        return repository.getByOwner(owner);
+    }
+    public List<RealEstate> getAllEstatesByArea(Double area){
+        return repository.getByArea(area);
+    }
+    public List<RealEstate> getAllEstatesByPrice(Double price){
+        return repository.getByPrice(price);
+    }
+    public List<RealEstate> getAllEstatesByAddress(String address){
+        return repository.getByAddress(address);
+    }
+    public List<RealEstate> getAllEstatesByFloors(Integer floors){
+        return repository.getByFloors(floors);
+    }
+    public List<RealEstate> getAllEstatesByRooms(Integer rooms){
+        return repository.getByRooms(rooms);
+    }
+    public List<RealEstate> getAllEstatesByStatus(Byte status){
+        return repository.getByStatus(status);
+    }
+
+    public List<RealEstate> getAllEstatesByType(EstateType type){
+        return repository.getByType(type);
+    }
+
+    public List<RealEstate> getAllEstatesByCurrency(EstateCurrency currency){
+        return repository.getByCurrency(currency);
+    }
+    public List<RealEstate> getAllEstatesByCity(EstateCity city){
+        return repository.getByCity(city);
+    }
+
 
 }

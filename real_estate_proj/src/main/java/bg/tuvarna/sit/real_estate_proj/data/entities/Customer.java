@@ -21,12 +21,11 @@ public class Customer {
     @Basic
     @Column(name = "customer_address")
     private String address;
-    @OneToMany(mappedBy = "customer",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<Sale> sales=new HashSet<>();
+
 
     public Customer(){}
-    public Customer(int idCustomer, String name, String phone, String address) {
-        this.idCustomer = idCustomer;
+    public Customer(String name, String phone, String address) {
+
         this.name = name;
         this.phone = phone;
         this.address = address;
@@ -64,13 +63,7 @@ public class Customer {
         this.address = address;
     }
 
-    public Set<Sale> getSales() {
-        return sales;
-    }
 
-    public void setSales(Set<Sale> sales) {
-        this.sales = sales;
-    }
 
     @Override
     public boolean equals(Object o) {

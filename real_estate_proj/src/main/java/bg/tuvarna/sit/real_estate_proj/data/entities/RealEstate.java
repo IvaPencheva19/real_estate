@@ -59,8 +59,7 @@ public class RealEstate {
     @JoinColumn(name = "user_id", nullable = false)
     private Administrator admin;
 
-    @OneToMany(mappedBy = "estate",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<Sale> sales=new HashSet<>();
+
 
     public RealEstate(){}
     public RealEstate(String estateOwner, EstateType estateType, Double estateArea, Double estatePrice, EstateCurrency estateCurrency, EstateCity estateCity, String estateAddress, Integer estateFloors,Integer estateRooms, String estateDescription, Byte estateStatus,Administrator admin) {
@@ -174,13 +173,7 @@ public class RealEstate {
         this.admin = admin;
     }
 
-    public Set<Sale> getSales() {
-        return sales;
-    }
 
-    public void setSales(Set<Sale> sales) {
-        this.sales = sales;
-    }
 
     public Integer getEstateRooms() {
         return estateRooms;
@@ -204,6 +197,6 @@ public class RealEstate {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idEstate, estateOwner, estateType, estateArea, estatePrice, estateCurrency, estateCity, estateAddress, estateFloors, estateDescription, estateStatus, admin,sales);
+        return Objects.hash(idEstate, estateOwner, estateType, estateArea, estatePrice, estateCurrency, estateCity, estateAddress, estateFloors, estateDescription, estateStatus, admin);
     }
 }

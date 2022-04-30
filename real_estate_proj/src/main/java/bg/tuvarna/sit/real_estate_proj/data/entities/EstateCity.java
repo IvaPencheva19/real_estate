@@ -17,8 +17,7 @@ public class EstateCity {
     @Column(name = "city")
     private String city;
 
-    @OneToMany(mappedBy = "estateCity",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<RealEstate> estates=new HashSet<>();
+
 
 
     public EstateCity() {
@@ -45,13 +44,6 @@ public class EstateCity {
         this.city = city;
     }
 
-    public Set<RealEstate> getEstates() {
-        return estates;
-    }
-
-    public void setEstates(Set<RealEstate> estates) {
-        this.estates = estates;
-    }
 
     @Override
     public boolean equals(Object o) {

@@ -1,6 +1,8 @@
 package bg.tuvarna.sit.real_estate_proj.data.repositories;
 
 import bg.tuvarna.sit.real_estate_proj.data.access.Connection;
+import bg.tuvarna.sit.real_estate_proj.data.entities.Broker;
+import bg.tuvarna.sit.real_estate_proj.data.entities.EstateCurrency;
 import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Sale;
 import org.apache.log4j.Logger;
@@ -110,6 +112,26 @@ public class SaleRepository implements DAORepository<Sale>{
         }
         catch (Exception ex){
             log.error("Get Sale error: " +ex.getMessage());
+        }
+        finally {
+            transaction.commit();
+            session.close();
+        }
+        return sales;
+    }
+
+    public List<Sale> getSalesByBroker(Broker name) {
+        Session session=Connection.openSession();
+        Transaction transaction=session.beginTransaction();
+        List<Sale> sales=new LinkedList<>();
+
+        try {
+            String jql = "SELECT u FROM Sale u WHERE broker = :name";
+            sales.addAll((session.createQuery(jql,Sale.class).setParameter("name", name).getResultList()));
+            log.info("Get sales by brokers");
+        }
+        catch (Exception ex){
+            log.error("Get sale error: " +ex.getMessage());
         }
         finally {
             transaction.commit();

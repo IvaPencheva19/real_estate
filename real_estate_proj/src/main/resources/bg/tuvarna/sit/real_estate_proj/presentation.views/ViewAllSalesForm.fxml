@@ -7,18 +7,16 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllSalesController">
     <fx:include fx:id="menu" source="MenuBroker.fxml" />
-   <Pane id="pane" layoutX="200.0" layoutY="59.0" prefHeight="720.0" prefWidth="1079.0">
-      <children>
-         <TableView id="brokerTable" fx:id="tableBrokers" layoutX="30.0" layoutY="100.0" prefHeight="525.0" prefWidth="1034.0" stylesheets="@css/viewAllBrokers.css">
-            <columns>
-               <TableColumn fx:id="usernameCol" prefWidth="175.19992065429688" text="USERNAME" />
-               <TableColumn fx:id="firstNameCol" minWidth="0.0" prefWidth="200.53335571289062" text="FIRST NAME" />
-               <TableColumn fx:id="lastNameCol" prefWidth="210.66668701171875" text="LAST NAME" />
-               <TableColumn fx:id="phoneCol" prefWidth="206.933349609375" text="PHONE" />
-               <TableColumn fx:id="emailCol" prefWidth="244.53326416015625" text="EMAIL" />
-            </columns>
-         </TableView>
-      </children>
-   </Pane>
+   <Pane id="pane" layoutX="200.0" layoutY="59.0" prefHeight="720.0" prefWidth="1079.0" />
+   <TableView id="brokerTable" fx:id="tableSales" layoutX="220.0" layoutY="143.0" prefHeight="577.0" prefWidth="1034.0" stylesheets="@css/viewAllSales.css">
+      <columns>
+         <TableColumn fx:id="idSale" prefWidth="75.0" text="ID" />
+         <TableColumn fx:id="customerName" prefWidth="175.19992065429688" text="CUSTOMER NAME" />
+         <TableColumn fx:id="customerPhone" minWidth="0.0" prefWidth="157.06658935546875" text="CUSTOMER PHONE" />
+         <TableColumn fx:id="customerAddress" prefWidth="214.66668701171875" text="CUSTOMER ADDRESS" />
+         <TableColumn fx:id="estateId" prefWidth="136.53326416015625" text="ESTATE ID" />
+         <TableColumn fx:id="contractNumber" prefWidth="272.533447265625" text="CONTRACT NUMBER" />
+      </columns>
+   </TableView>
 
 </AnchorPane>

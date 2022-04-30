@@ -5,3 +5,15 @@
 #pane{
     -fx-background-color: white;
 }
+
+.button{
+    -fx-background-color: #84e1e1;
+    -fx-text-fill: #737373;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+.text-field{
+    -fx-border-width: 0px 0px 2px 0px;
+
+    -fx-border-color: #84e1e1;
+}

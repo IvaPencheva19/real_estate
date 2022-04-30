@@ -27,14 +27,7 @@ public class EstateTypeService {
         type.setType(name);
         repository.update(type);
     }
-    public void addRealEstate(EstateType type, RealEstate estate) {
-       type.getEstates().add(estate);
-        repository.update(type);
-    }
-    public void removeRealEstate(EstateType type, RealEstate estate) {
-        type.getEstates().remove(estate);
-        repository.update(type);
-    }
+
     public List<EstateType> getAllTypes(){
         return repository.getAll();
     }

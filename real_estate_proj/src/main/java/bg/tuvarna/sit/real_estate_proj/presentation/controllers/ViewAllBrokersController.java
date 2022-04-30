@@ -1,11 +1,7 @@
 package bg.tuvarna.sit.real_estate_proj.presentation.controllers;
-
 import bg.tuvarna.sit.real_estate_proj.data.entities.Broker;
-import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import bg.tuvarna.sit.real_estate_proj.presentation.models.BrokerModel;
-import bg.tuvarna.sit.real_estate_proj.presentation.models.RealEstateModel;
 import bg.tuvarna.sit.real_estate_proj.service.BrokerService;
-import bg.tuvarna.sit.real_estate_proj.service.RealEstateService;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;

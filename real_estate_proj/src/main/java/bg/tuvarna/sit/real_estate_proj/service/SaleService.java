@@ -1,4 +1,5 @@
 package bg.tuvarna.sit.real_estate_proj.service;
+import bg.tuvarna.sit.real_estate_proj.data.entities.Broker;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Customer;
 import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Sale;
@@ -37,6 +38,8 @@ public class SaleService {
     public List<Sale> getAllSales(){
         return repository.getAll();
     }
-
+    public List<Sale> getAllSalesByBroker(Broker broker){
+        return repository.getSalesByBroker(broker);
+    }
 
 }

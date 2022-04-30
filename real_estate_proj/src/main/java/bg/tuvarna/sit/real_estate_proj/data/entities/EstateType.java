@@ -17,8 +17,7 @@ public class EstateType {
     @Column(name = "type")
     private String type;
 
-    @OneToMany(mappedBy = "estateType",fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<RealEstate> estates=new HashSet<>();
+
 
     public EstateType(){}
 
@@ -42,13 +41,6 @@ public class EstateType {
         this.type = type;
     }
 
-    public Set<RealEstate> getEstates() {
-        return estates;
-    }
-
-    public void setEstates(Set<RealEstate> estates) {
-        this.estates = estates;
-    }
 
     @Override
     public boolean equals(Object o) {

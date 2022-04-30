@@ -28,14 +28,7 @@ public class EstateCurrencyService {
         currency.setCurrency(name);
         repository.update(currency);
     }
-    public void addRealEstate(EstateCurrency currency, RealEstate estate) {
-       currency.getEstates().add(estate);
-        repository.update(currency);
-    }
-    public void removeRealEstate(EstateCurrency currency, RealEstate estate) {
-        currency.getEstates().remove(estate);
-        repository.update(currency);
-    }
+
     public List<EstateCurrency> getAllCurrency(){
         return repository.getAll();
     }

@@ -35,14 +35,7 @@ public class CustomerService {
         cus.setAddress(address);
         repository.update(cus);
     }
-    public void addSale(Customer cus, Sale sale) {
-        cus.getSales().add(sale);
-        repository.update(cus);
-    }
-    public void removeSale(Customer cus, Sale sale) {
-        cus.getSales().remove(sale);
-        repository.update(cus);
-    }
+
    public List<Customer> getAllCustomers(){
         return repository.getAll();
    }

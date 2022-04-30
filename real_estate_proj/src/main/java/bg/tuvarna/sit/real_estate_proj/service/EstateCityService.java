@@ -26,14 +26,7 @@ public class EstateCityService {
         city.setCity(name);
         repository.update(city);
     }
-    public void addRealEstate(EstateCity city, RealEstate estate) {
-        city.getEstates().add(estate);
-        repository.update(city);
-    }
-    public void removeRealEstate(EstateCity city, RealEstate estate) {
-        city.getEstates().remove(estate);
-        repository.update(city);
-    }
+
     public List<EstateCity> getAllCities(){
         return repository.getAll();
     }

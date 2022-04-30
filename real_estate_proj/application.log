@@ -25,3 +25,22 @@
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: No entity found for query
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : owner
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : owner
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : owner
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : owner
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : price
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : name
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : name
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : name
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : name
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: Named parameter not bound : name
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get estate error: class java.lang.String cannot be cast to class java.lang.Double (java.lang.String and java.lang.Double are in module java.base of loader 'bootstrap')
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get estate error: class java.lang.String cannot be cast to class java.lang.Double (java.lang.String and java.lang.Double are in module java.base of loader 'bootstrap')
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get estate error: class java.lang.String cannot be cast to class java.lang.Double (java.lang.String and java.lang.Double are in module java.base of loader 'bootstrap')
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get estate error: class java.lang.String cannot be cast to class java.lang.Double (java.lang.String and java.lang.Double are in module java.base of loader 'bootstrap')
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: org.hibernate.HibernateException: collection was evicted
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
