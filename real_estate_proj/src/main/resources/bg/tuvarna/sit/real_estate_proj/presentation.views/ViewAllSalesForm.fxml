@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllSalesController">
     <fx:include fx:id="menu" source="MenuBroker.fxml" />
-   <Pane id="pane" layoutX="200.0" layoutY="59.0" prefHeight="720.0" prefWidth="1079.0" />
+   <Pane id="pane" layoutX="200.0" layoutY="59.0" prefHeight="720.0" prefWidth="1079.0" style="-fx-background-color: #ffffff;" />
    <TableView id="brokerTable" fx:id="tableSales" layoutX="220.0" layoutY="143.0" prefHeight="577.0" prefWidth="1034.0" stylesheets="@css/viewAllSales.css">
       <columns>
          <TableColumn fx:id="idSale" prefWidth="75.0" text="ID" />

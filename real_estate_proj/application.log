@@ -44,3 +44,9 @@
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: org.hibernate.HibernateException: collection was evicted
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Access denied for user 'root'@'localhost' (using password: YES)
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Access denied for user 'root'@'localhost' (using password: YES)
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+[JavaFX Application Thread] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper  - Access denied for user 'root'@'localhost' (using password: YES)
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.access.Connection  - Initial SessionFactory created failed org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]

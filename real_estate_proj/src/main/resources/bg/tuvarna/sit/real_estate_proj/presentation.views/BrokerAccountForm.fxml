@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.BrokerAccountController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="AnchorPane" stylesheets="@css/brokerAccount.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.BrokerAccountController">
    <children>
-      <fx:include fx:id="menu" source="MenuBroker.fxml"/>
+      <fx:include fx:id="menu" source="MenuBroker.fxml" />
+      <ImageView fitHeight="576.0" fitWidth="840.0" layoutX="332.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@house.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="353.0" layoutY="485.0" prefHeight="46.0" prefWidth="258.0" text="REAL ESTATE AGENCY">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="948.0" layoutY="563.0" prefHeight="45.0" prefWidth="167.0" text=" HELLO USER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Pane id="borderPane" layoutX="283.0" layoutY="166.0" prefHeight="530.0" prefWidth="915.0">
+         <children>
+            <Pane id="squareLB" layoutX="-36.0" layoutY="435.0" prefHeight="154.0" prefWidth="152.0" />
+         </children>
+      </Pane>
+      <Pane id="squareLB" layoutX="1090.0" layoutY="115.0" prefHeight="154.0" prefWidth="152.0" />
    </children>
 </AnchorPane>
