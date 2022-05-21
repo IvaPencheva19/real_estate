@@ -41,5 +41,14 @@ public class SaleService {
     public List<Sale> getAllSalesByBroker(Broker broker){
         return repository.getSalesByBroker(broker);
     }
+    public boolean checkContract(String contract){
 
+        List<Sale> allSales=getAllSales();
+        for(Sale sale:allSales){
+            if(sale.getContract().equals(contract)){
+                return false;
+            }
+        }
+        return true;
+    }
 }

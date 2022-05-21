@@ -15,7 +15,7 @@ public class RealEstateModel {
     private Integer estateFloors;
     private Integer estateRooms;
     private String estateDescription;
-    private Byte estateStatus;
+    private String estateStatus;
 
     public RealEstateModel(RealEstate estate){
         idEstate=estate.getIdEstate();
@@ -29,7 +29,12 @@ public class RealEstateModel {
         estateFloors=estate.getEstateFloors();
         estateRooms=estate.getEstateRooms();
         estateDescription=estate.getEstateDescription();
-        estateStatus=estate.getEstateStatus();
+        if(estate.getEstateStatus()==0) {
+            estateStatus ="SOLD";
+        }
+        if(estate.getEstateStatus()==1) {
+            estateStatus ="FOR SALE";
+        }
     }
 
     public int getIdEstate() {
@@ -120,11 +125,11 @@ public class RealEstateModel {
         this.estateDescription = estateDescription;
     }
 
-    public Byte getEstateStatus() {
+    public String getEstateStatus() {
         return estateStatus;
     }
 
-    public void setEstateStatus(Byte estateStatus) {
+    public void setEstateStatus(String estateStatus) {
         this.estateStatus = estateStatus;
     }
 }

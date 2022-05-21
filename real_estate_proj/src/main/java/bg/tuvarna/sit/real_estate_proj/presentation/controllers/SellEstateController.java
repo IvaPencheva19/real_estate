@@ -4,12 +4,17 @@ import bg.tuvarna.sit.real_estate_proj.data.entities.Broker;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Customer;
 import bg.tuvarna.sit.real_estate_proj.data.entities.RealEstate;
 import bg.tuvarna.sit.real_estate_proj.data.entities.Sale;
+import bg.tuvarna.sit.real_estate_proj.presentation.FormActions.ShowWarning;
 import bg.tuvarna.sit.real_estate_proj.service.BrokerService;
 import bg.tuvarna.sit.real_estate_proj.service.CustomerService;
 import bg.tuvarna.sit.real_estate_proj.service.RealEstateService;
 import bg.tuvarna.sit.real_estate_proj.service.SaleService;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+
+import java.util.Optional;
 
 public class SellEstateController {
     @FXML
@@ -36,14 +41,35 @@ public class SellEstateController {
         String contrNumber = contractNumber.getText();
         if(estate!=null) {
             if (estate.getEstateStatus() == 1) {
-                Customer customer = new Customer(cusName, cusPhone, cusAddress);
-                customerService.createCustomer(customer);
-                Sale sale = new Sale(contrNumber, estate, customer, (Broker) HelloController.user);
-                saleService.createSale(sale);
-                Byte statusValue = 0;
-                realEstateServiceService.changeEstateStatus(estate, statusValue);
+              if (saleService.checkContract(contrNumber)) {
+                  Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                  alert.setTitle("Deleting");
+                  String s = "Confirm to sell broker " + estId;
+                  alert.setContentText(s);
+
+                  Optional<ButtonType> result = alert.showAndWait();
+
+                  if ((result.isPresent()) && (result.get() == ButtonType.OK)) {
+                      Customer customer = new Customer(cusName, cusPhone, cusAddress);
+                      customerService.createCustomer(customer);
+                      Sale sale = new Sale(contrNumber, estate, customer, (Broker) HelloController.user);
+                      saleService.createSale(sale);
+                      Byte statusValue = 0;
+                      realEstateServiceService.changeEstateStatus(estate, statusValue);
+                  }
+              }
+              else{
+                  ShowWarning.showWarning("There is other sale with this contract!");
+              }
 
             }
+            else{
+                ShowWarning.showWarning("This is estate is SOLD!");
+            }
+
+        }
+        else{
+            ShowWarning.showWarning("No such estate!");
         }
         clearFields();
     }

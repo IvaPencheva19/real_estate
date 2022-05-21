@@ -7,13 +7,11 @@ import bg.tuvarna.sit.real_estate_proj.service.*;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.util.List;
+import java.util.Optional;
 
 public class UpdateDeleteEstatesController {
     @FXML
@@ -223,9 +221,18 @@ public class UpdateDeleteEstatesController {
             ShowWarning.showInformation("No such estate");
         }
         else {
-            estateService.deleteRealEstate(estate);
-            ShowWarning.showInformation("Successfull deleting");
-            clearFields();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Deleting");
+            String s = "Confirm to delete real estate "+idVal;
+            alert.setContentText(s);
+
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if ((result.isPresent()) && (result.get() == ButtonType.OK)) {
+                estateService.deleteRealEstate(estate);
+                ShowWarning.showInformation("Successfull deleting");
+                clearFields();
+            }
         }
     }
     private void clearFields(){

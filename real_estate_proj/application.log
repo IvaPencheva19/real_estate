@@ -44,3 +44,5 @@
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: org.hibernate.HibernateException: collection was evicted
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
 [JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.UserRepository  - Get User error: No entity found for query
+[JavaFX Application Thread] ERROR bg.tuvarna.sit.real_estate_proj.data.repositories.RealEstateRepository  - Get real estate error: No entity found for query

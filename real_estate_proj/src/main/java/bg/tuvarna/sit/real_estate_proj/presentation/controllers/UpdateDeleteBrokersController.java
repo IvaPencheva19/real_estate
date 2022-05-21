@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.util.Optional;
+
 public class UpdateDeleteBrokersController {
     @FXML
     private TableColumn usernameCol;
@@ -100,9 +102,20 @@ public class UpdateDeleteBrokersController {
             ShowWarning.showInformation("No such user");
         }
         else {
-            brokerService.deleteBroker(broker);
-            ShowWarning.showInformation("Successfull deleting");
-            clearFields();
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Deleting");
+            String s = "Confirm to delete broker "+usernameVal;
+            alert.setContentText(s);
+
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if ((result.isPresent()) && (result.get() == ButtonType.OK)) {
+                brokerService.deleteBroker(broker);
+                ShowWarning.showInformation("Successfull deleting");
+                clearFields();
+
+            }
+
         }
     }
     private void clearFields(){

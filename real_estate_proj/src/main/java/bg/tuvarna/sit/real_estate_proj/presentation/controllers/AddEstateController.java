@@ -77,6 +77,7 @@ public class AddEstateController {
          else {
              RealEstate estateToAdd = new RealEstate(ownerValue, typeValue, areaValue, priceValue, currencyValue, cityValue, addressValue, floorsValue, roomsValue, descriptionValue, statusValue, admin);
              estateService.createRealEstate(estateToAdd);
+             ShowWarning.showInformation("Successfully added real estate");
              clearFields();
          }
     }
