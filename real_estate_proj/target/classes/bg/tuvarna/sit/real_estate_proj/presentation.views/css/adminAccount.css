@@ -1,0 +1,14 @@
+
+.AnchorPane{
+    -fx-background-color: #ffffff;
+}
+#borderPane{
+    -fx-border-width: 6px;
+    -fx-border-color:  rgba(115, 115, 115, 0.8);
+
+}
+#squareLB{
+    -fx-border-width: 6px;
+    -fx-border-color:  rgba(132, 225, 225, 0.8);
+    -fx-background-color:  rgba(132, 225, 225, 0.3);
+}

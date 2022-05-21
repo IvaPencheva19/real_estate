@@ -8,7 +8,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bg.tuvarna.sit.real_estate_proj.presentation.controllers.ViewAllEstatesBrokerController">
    <children>
       <fx:include fx:id="menu" source="MenuBroker.fxml" />
-      <Pane layoutX="198.0" layoutY="60.0" prefHeight="718.0" prefWidth="1082.0" />
+      <Pane layoutX="198.0" layoutY="60.0" prefHeight="718.0" prefWidth="1082.0" style="-fx-background-color: #ffff;" />
       <TableView id="adminTable" fx:id="estatesTable" layoutX="232.0" layoutY="148.0" prefHeight="575.0" prefWidth="1000.0" stylesheets="@css/viewAllEstates.css">
          <columns>
             <TableColumn fx:id="idCol" prefWidth="34.66661071777344" text="id" />
